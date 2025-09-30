@@ -37,8 +37,8 @@ class CsvRowCounter extends HTMLElement {
       const text=e.target.result;
       const n=this._count(text);
       this._els.count.textContent=String(n);
-      this._emitProps({rowCount:n,fileName:file.name});
-      this.dispatchEvent(new Event('fileLoaded'));
+      this._emitProps({ rowCount: n, fileName: file.name });
+      this.dispatchEvent(new CustomEvent('fileLoaded', { detail: { rowCount: n, fileName: file.name } }));
     };
     r.readAsText(file);
   }
