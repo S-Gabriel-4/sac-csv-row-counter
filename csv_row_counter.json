@@ -1,0 +1,30 @@
+{
+  "id": "com.example.csvrowcounter",
+  "name": "CSV Row Counter",
+  "description": "Reads a CSV locally and counts rows (excluding header).",
+  "version": "1.0.0",
+  "vendor": "You",
+  "newInstancePrefix": "CSVRowCounter",
+
+  "properties": {
+    "rowCount": { "type": "number", "default": 0 },
+    "fileName": { "type": "string", "default": "" }
+  },
+
+  "methods": {},
+
+  "events": {
+    "fileLoaded": {
+      "description": "Fires after a CSV parsed; updates rowCount."
+    }
+  },
+
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "csv-row-counter",
+      "url": "https://raw.githubusercontent.com/S-Gabriel-4/sac-csv-row-counter/main/main.js",
+      "integrity": " sha256-6vLkbK5tqGE2LCURC3Zy+YFebkQdMHnkG7aYSQDWtco="
+    }
+  ]
+}
