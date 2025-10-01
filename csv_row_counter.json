@@ -11,7 +11,10 @@
     "fileName": { "type": "string", "default": "" }
   },
 
-  "methods": {},
+  "methods": {
+    "getRowCount": { "returnType": "number" },
+    "getFileName": { "returnType": "string" }
+  },
 
   "events": {
     "fileLoaded": {
