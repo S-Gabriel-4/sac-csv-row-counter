@@ -49,5 +49,12 @@ class CsvRowCounter extends HTMLElement {
     let c=0; for(let j=i+1;j<lines.length;j++){ if(lines[j].trim()!=="") c++; }
     return c;
   }
+  getRowCount(){
+    return this._els.count.textContent ? parseInt(this._els.count.textContent, 10) : 0;
+  }
+
+  getFileName(){
+    return this._els.fname.textContent || "";
+  }
 }
 customElements.define('csv-row-counter', CsvRowCounter);
